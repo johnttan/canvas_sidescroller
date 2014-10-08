@@ -27,7 +27,6 @@ var playerModel = function(screen, gameSize, x, y, addModel){
       // if(self.keystate[self.allowedKeys[e.which-2]]){
       //   self.keystate[self.allowedKeys[e.which-2]] = false;
       // }
-      console.log('keydown', e.which)
     }
   })
   $(document).keyup(function(e){
@@ -41,7 +40,6 @@ var playerModel = function(screen, gameSize, x, y, addModel){
   var self = this;
   this.draw = function(){
     self.screen.fillRect(self.x, self.y, this.sizex, this.sizey);
-    console.log('player', self.x, self.y)
   }
   this.keys = {
     'UP': 38,
@@ -75,7 +73,7 @@ var playerModel = function(screen, gameSize, x, y, addModel){
     if(self.keystate.SPACE){
       // Projectile rate limit.
       if(self.innerTicks - self.projectileTicks > 10){
-        self.addModel(new projectileModel(self.screen, self.gameSize, self.x, self.y+self.sizey/2))
+        self.addModel(new projectileModel(self.screen, self.gameSize, self.x+50, self.y+self.sizey/2))
         self.projectileTicks = self.innerTicks;
       }
     }

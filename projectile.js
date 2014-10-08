@@ -4,9 +4,11 @@ var projectileModel = function(screen, gameSize, x, y, enemy){
   this.gameSize = gameSize;
   this.x = x;
   this.y = y;
-  this.velocity = 15;
+  this.velocity = 10;
+  this.sizey = 5;
+  this.sizex = 5;
   this.draw = function(){
-    self.screen.fillRect(self.x, self.y, 5, 5);
+    self.screen.fillRect(self.x, self.y, this.sizex, this.sizey);
   }
   this.update = function(){
     if(enemy){

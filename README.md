@@ -11,3 +11,5 @@ This is a small asteroids-like game I made to learn about HTML5 Canvas and the r
 **Enemy.js** is similar to Player.js, but it lacks keyboard input logic and contains RNG based projectile spawns and position changes.
 
 **Projectile.js** is a class for spawning projectile objects.
+
+![Screenshot](images/screenshot.png)
